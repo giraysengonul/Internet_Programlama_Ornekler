@@ -1,0 +1,69 @@
+<html>
+  <meta charset="UTF-8">
+  <form name="kayit" action="divOrnek3.html" method="post">
+    <h2>Kayıt Formu</h2>
+    <table border="2" bgcolor="cyan">
+        <tr>
+            <td>Adı</td>
+            <td>
+               <input type="text" name="isim" size="30" required/>
+            </td>
+        </tr>
+        <tr>
+            <td>Soyadı</td>
+            <td>
+               <input type="text" name="soyisim" size="30" required/>
+            </td>
+        </tr>
+        <tr>
+            <td>E-posta Adresi</td>
+            <td>
+               <input type="email" name="mail" size="30" required/>
+            </td>
+        </tr>
+        <tr>
+            <td>Şifre</td>
+            <td>
+               <input type="password" name="sifre" size="30" placeholder="8 karakter olsun" required/>
+            </td>
+        </tr>
+        <tr>
+            <td>Şifre (Tekrar)</td>
+            <td>
+               <input type="password" name="sifre2" size="30" required/>
+            </td>
+        </tr>
+        <tr>
+            <td>Telefon</td>
+            <td>
+               <input type="tel" name="telefon" size="30" placeholder="(___)(_______)"/>
+            </td>
+        </tr>
+        <tr>
+            <td>Cinsiyet</td>
+            <td>
+               <input type="radio" name="cinsiyet" required/>ERKEK
+               <input type="radio" name="cinsiyet" required/>KADIN
+            </td>
+        </tr>
+        <tr>
+            <td>Doğum Tarihi</td>
+            <td>
+               <input type="date" name="dogum" style="width:100%; background-color:yellow"/>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td colspan="2">
+               <input type="checkbox" id="uyelik" required/>Üyelik sözleşmesi şartlarını okudum ve kabul ediyorum.
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td colspan="2">
+               <input type="submit" value="KAYIT OL" id="buton"/>
+            </td>
+        </tr>
+    </table>  
+  </form>
+</html>

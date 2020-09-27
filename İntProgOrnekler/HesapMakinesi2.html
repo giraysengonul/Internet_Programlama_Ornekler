@@ -1,0 +1,48 @@
+
+<html>
+    <head>
+    <title>Hesap Makinesi</title>
+    <meta charset="UTF-8">
+    <script type="text/javascript">
+        function topla()
+        {
+           s1=document.getElementById("sayi1").value; 
+           s2=document.getElementById("sayi2").value; 
+           sonuc.value=parseInt(s1)+parseInt(s2);
+        }
+        function cikar()
+        {
+           s1=document.getElementById("sayi1").value; 
+           s2=document.getElementById("sayi2").value; 
+           sonuc.value=parseInt(s1)-parseInt(s2);
+        }
+        function carp()
+        {
+           s1=document.getElementById("sayi1").value; 
+           s2=document.getElementById("sayi2").value; 
+           sonuc.value=parseInt(s1)*parseInt(s2);
+        }
+        function bol()
+        {
+           s1=document.getElementById("sayi1").value; 
+           s2=document.getElementById("sayi2").value; 
+           if(s2==0)
+               alert("0 paydada olamaz.Lütfen değeri değiştirin!");
+           else{
+               var deger=parseFloat(s1)/parseFloat(s2);
+               sonuc.value=deger.toFixed(4);
+           }
+        }
+    </script>
+</head>
+<body>
+    <h2>HESAP MAKİNESİ</h2>
+<input type="text" id="sayi1" placeholder="SAYİ1"/></br>
+<input type="text" id="sayi2" placeholder="SAYİ2"/></br>
+<input type="text" id="sonuc" placeholder="SONUC"/></br>
+<input type="button" id="toplama" value="TOPLA" onclick="topla()"/>
+<input type="button" id="cikarma" value="ÇIKAR" onclick="cikar()"/>
+<input type="button" id="carpma" value="ÇARP" onclick="carp()"/>
+<input type="button" id="bolme" value="BÖL" onclick="bol()"/>
+</body>
+</html>
