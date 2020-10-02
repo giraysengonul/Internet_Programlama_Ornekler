@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <style>
+            #aa{
+                margin-left: 105px; <!-- class seçicisi kullanmak icin id="aa" demek gerekiyor. -->
+            }
+            
+            table input{
+                width: 45px; <!--tablo etiketi içindeki inputları etkiler -->
+            }
+        </style>
+
+        <script>
+            function yaz(parametre){
+                document.getElementById("kartNo").value += parametre;
+                <!-- örneğin 1 tuşuna basıldığında value değeri 1 gelecek (butonlardaki value değerine bakacak) -->
+            }
+
+            function temizle(){
+                document.getElementById("kartNo").value = "";
+            }
+
+            function sil(){
+                var s = document.getElementById("kartNo").value;
+                s = s.substring(0,s.length-1);
+                document.getElementById("kartNo").value = s;
+            }
+
+        </script>
+
+    </head>
+
+    <body>
+        Kredi kart no : <input type="text" id="kartNo"/> <br/>
+        <table id="aa">
+            <tr>
+                <td><input type="button" value="1" onclick="yaz(1)"/></td>
+                <td><input type="button" value="2" onclick="yaz(2)"/></td>
+                <td><input type="button" value="3" onclick="yaz(3)"/></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="4" onclick="yaz(4)"/></td>
+                <td><input type="button" value="5" onclick="yaz(5)"/></td>
+                <td><input type="button" value="6" onclick="yaz(6)"/></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="7" onclick="yaz(7)"/></td>
+                <td><input type="button" value="8" onclick="yaz(8)"/></td>
+                <td><input type="button" value="9" onclick="yaz(9)"/></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="Sil" onclick="sil()"/></td>
+                <td><input type="button" value="0" onclick="yaz(0)"/></td>
+                <td><input type="button" value="Sıfırla" onclick="temizle()"/></td>
+            </tr>
+        </table>
+
+    </body>
+</html>
